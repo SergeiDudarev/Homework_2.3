@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+
+
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.print("Please enter your score: ");
+        int score = new Scanner(System.in).nextInt();
+
+        Scanner scanner = new Scanner(System.in);
+
+        while (score < 0 || score > 100) {
+            System.out.print("You entered incorrect value. Min value cannot be less than 0 and greater than 100. " +
+                    "Please enter correct value: ");
+
+            score = scanner.nextInt();
+        }
+
+        if (score >= 70) {
+            System.out.println("Congrats! You’ve passed the test!");
+
+        } else {
+            System.out.println("Sorry, you’ve failed the test.");
+        }
+    }
+}
